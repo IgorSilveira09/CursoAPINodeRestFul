@@ -1,6 +1,7 @@
 # Node API RestFul
 
 ## Apresentação
+
 <p>Esta é uma API baseada na arquitetura Rest utilizando Node.JS, Express, Postgres e Sequelize</p>
 
 ## Primeiro passo
@@ -35,3 +36,24 @@
 - Começamos a incluir os métodos HTTP nas rotas, utilizando a constante criada anteriormente, "routes". <p><code>routes.post("/usuarios",usuarioController.login);</code></p>.
  _"/usuario"_ é uma request, ja o _"usuarioController"_ vem como uma Callback onde solicitamos um método pré criado no arquivo "UsuarioController.js".
   
+## Quarto passo
+
+### Configurando o banco
+
+- Instalar as dependencias do (pg, pg-hstore, sequelize e sequelize cli)
+
+- Criar as constantes no .env:
+
+  1.DIALECT= postgres <br>
+  2.HOST = localhost <br>
+  3.USER_NAME = postgres <br>
+  4.PASSWORD = ... <br>
+  5.DATABASE = gestao-service <br>
+  6.PORT = 5432 <br>
+
+- Criar configuração de sequelize na pasta config, criando um arquivom database.js
+  <p>No arquivo database.js, configuramos os ambientes possiveis para o desenvolvimento. incluimos um <code>switch case</code> onde o ambiente mudará de acordo com a branch que publicaremos.</p>
+  <p>Criamos funções independentes que carregarão objetos unicos de acordo com o ambiente (prod, hml ou local) </p>
+
+- Criar o arquivo .sequelizerc na raiz do projeto.
+  <p>Criamos um arquivo .sequelizerc na raiz do projeto, este arquivo será responsavel pelas configurações das migrations que criaremos</p>
