@@ -13,7 +13,7 @@
 - Cors ele garantirá que toda requisição feita para nossa API não seja recusada.
 - Dotenv carrega automaticamente as variaveis de ambiente de um arquivo .env.
 
-- Nodemon monitora a aplicação e garante que ela recarregue automaricamente sem precisar ficar subindo novamente a cada alteração.
+- Nodemon monitora a aplicação e garante que ela recarregue automaticamente sem precisar ficar subindo novamente a cada alteração.
 
 ## Segundo passo
 
@@ -51,7 +51,7 @@
   5.DATABASE = gestao-service <br>
   6.PORT = 5432 <br>
 
-- Criar configuração de sequelize na pasta config, criando um arquivom database.js
+- Criar configuração de sequelize na pasta config, criando um arquivo database.js
   <p>No arquivo database.js, configuramos os ambientes possiveis para o desenvolvimento. incluimos um <code>switch case</code> onde o ambiente mudará de acordo com a branch que publicaremos.</p>
   <p>Criamos funções independentes que carregarão objetos unicos de acordo com o ambiente (prod, hml ou local) </p>
 
